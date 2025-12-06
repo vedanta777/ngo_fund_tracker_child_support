@@ -1,7 +1,7 @@
 # establishing connection between Python and MySQL
 
 import mysql.connector
-mydb = mysql.connector.connect (host = "localhost", user = "root", passwd = "#Vedanta@123")
+mydb = mysql.connector.connect (host = "*****", user = "*****", passwd = "*****")
 mycursor = mydb.cursor()
 
 # creating database for data manipulation
@@ -68,3 +68,4 @@ def data_manipulation () :
         exit()                                                                                            
                                                                                                               
 data_manipulation ()
+
