@@ -20,9 +20,10 @@ mycursor.execute ("create table if not exists users (id int auto_increment prima
 def add_funds () :
     donor_name = input("Enter name of the donor - ")
     amount = float(input("Enter the amount to be donated - "))
-    purpose = input("Enter purpose as donation or expense - ")
+    type = input("Enter type as donation or expense - ")
+    purpose = input("Enter purpose of donation in about 256 words max - ")
     date = input("Enter date of donation in yyyy-mm-dd format - ")
-    mycursor.execute ("insert into funds (type, donor_name, amount, purpose, date) values (%s,%s,%s,%s,%s)", (purpose,donor_name,amount,purpose,date))
+    mycursor.execute ("insert into funds (type, donor_name, amount, purpose, date) values (%s,%s,%s,%s,%s)", (type,donor_name,amount,purpose,date))
     mydb.commit()
     print("Data Entry successfull !!")
 
@@ -68,4 +69,5 @@ def data_manipulation () :
         exit()                                                                                            
                                                                                                               
 data_manipulation ()
+
 
